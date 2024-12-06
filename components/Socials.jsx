@@ -12,19 +12,19 @@ import Link from "next/link";
 
 const icons = [
   {
-    path: "/",
+    path: "https://github.com/bomagdi",
     name: <RiGithubFill />,
   },
   {
-    path: "/",
+    path: "https://www.youtube.com/@real.binmagdi",
     name: <RiYoutubeFill />,
   },
   {
-    path: "/",
+    path: "https://www.instagram.com/sami.magdi/",
     name: <RiInstagramFill />,
   },
   {
-    path: "/",
+    path: "https://www.facebook.com/Real.ElDesouky/",
     name: <RiFacebookFill />,
   },
   {
