@@ -7,9 +7,9 @@ import {
   MailIcon,
   HomeIcon,
   PhoneCall,
-  GarduationCap,
-  Calender,
-  Briefcase,
+  GraduationCap,
+  Calendar,
+  // Briefcase,
 } from "lucide-react";
 
 const infoData = [
@@ -22,15 +22,11 @@ const infoData = [
     text: "+966 55 814 7884",
   },
   {
-    icon: <MailIcon size={24} />,
-    text: "binmagdi97@gmail.com",
-  },
-  {
-    icon: <Calender size={24} />,
+    icon: <Calendar size={24} />,
     text: "Born On 2 Aug, 1997",
   },
   {
-    icon: <GarduationCap size={24} />,
+    icon: <GraduationCap size={24} />,
     text: "Faculty of Commerce",
   },
   {
@@ -38,8 +34,8 @@ const infoData = [
     text: "Based In Saudi Arabia ",
   },
   {
-    icon: <Briefcase size={24} />,
-    text: "Bin Magdi",
+    icon: <MailIcon size={24} />,
+    text: "binmagdi97@gmail.com",
   },
 ];
 
@@ -134,16 +130,52 @@ const About = () => {
           {/* Tabs */}
           <div className="flex-1">
             <Tabs defaultValue="personal">
-              <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none'>
-                <TabsTrigger value="personal">Personal Info</TabsTrigger>
-                <TabsTrigger value="qualifications">Qualifications</TabsTrigger>
-                <TabsTrigger value="skills">Skills</TabsTrigger>
+              <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
+                <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
+                  Personal Info
+                </TabsTrigger>
+                <TabsTrigger
+                  className="w-[162px] xl:w-auto"
+                  value="qualifications"
+                >
+                  Qualifications
+                </TabsTrigger>
+                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
+                  Skills
+                </TabsTrigger>
               </TabsList>
               {/* Tab Content */}
               <div className="text-lg mt-12 xl:mt-8">
                 {/* Personal */}
-                <TabsContent value="personal">Personal Info</TabsContent>
-                <TabsContent value="qualifications">Qualifications Info</TabsContent>
+                <TabsContent value="personal">
+                  <div className="text-center xl:text-left">
+                    <h3 className="h3 mb-4">Your Vision, My Creation</h3>
+
+                    <p className="subtitle max-w-xl mx-auto xl:mx-0 ">
+                      "I am a passionate front-end developer dedicated to
+                      creating visually stunning and user-friendly web
+                      experiences. With a keen eye for detail and a love for
+                      clean code, I turn ideas into digital realities."
+                    </p>
+                    {/* ICons */}
+                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                      {infoData.map((item, index) => {
+                        return (
+                          <div
+                            className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                            key={index}
+                          >
+                            <div className="text-primary">{item.icon}</div>
+                            <div>{item.text}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </TabsContent>
+                <TabsContent value="qualifications">
+                  Qualifications Info
+                </TabsContent>
                 <TabsContent value="skills">Skills Info</TabsContent>
               </div>
             </Tabs>
