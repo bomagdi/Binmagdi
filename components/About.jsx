@@ -9,7 +9,7 @@ import {
   PhoneCall,
   GraduationCap,
   Calendar,
-  // Briefcase,
+  Briefcase,
 } from "lucide-react";
 
 const infoData = [
@@ -171,10 +171,35 @@ const About = () => {
                         );
                       })}
                     </div>
+                    {/* Languages */}
+                    <div className="flex flex-col gap-y-2">
+                      <div className="text-primary">Language Skill</div>
+                      <div className="border-b border-border"></div>
+                      <div>Arabic, English</div>
+                    </div>
                   </div>
                 </TabsContent>
+                {/* qualifications */}
                 <TabsContent value="qualifications">
-                  Qualifications Info
+                  <div>
+                    <h3 className="h3 mb-8 text-center xl:text-left">
+                      My Awesome Journey
+                    </h3>
+                    {/* Experience & Education */}
+                    <div>
+                      {/* Experience */}
+                      <div>
+                        <div>
+                          <Briefcase />
+                          <div className="">
+                            {getData(qualificationData, "experience").title}
+                          </div>
+                        </div>
+                      </div>
+                      {/* Education */}
+                      <div>Education</div>
+                    </div>
+                  </div>
                 </TabsContent>
                 <TabsContent value="skills">Skills Info</TabsContent>
               </div>
