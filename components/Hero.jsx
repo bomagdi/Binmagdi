@@ -12,6 +12,7 @@ import {
 import DivImg from "./DivImg";
 import Badge from "./Badge";
 import Socials from "./Socials";
+import CvDownload from "./CvDownload";
 
 //Components
 
@@ -38,9 +39,9 @@ const Hero = () => {
                   Contact me <Send size={18} />
                 </Button>
               </Link>
-              <Button variant="secondary" className="gap-x-2">
-                Download Cv <Download size={18} />
-              </Button>
+
+              {/* Cv Download Button */}
+              <CvDownload />
             </div>
             {/* Socials */}
             <Socials
