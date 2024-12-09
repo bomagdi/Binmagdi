@@ -73,7 +73,7 @@ const Reviews = () => {
         <h2 className="section-title mb-12 text-center mx-auto">Reviews</h2>
         {/* Slider */}
         <Swiper
-          className="h-[450px]"
+          className="h-[530px]"
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 2 },
@@ -86,7 +86,7 @@ const Reviews = () => {
           {reviewsData.map((person, index) => {
             return (
               <SwiperSlide key={index}>
-                <Card className="bg-tertiary dark:bg-secondary/40 p-8 min-h-[400px]">
+                <Card className="bg-tertiary dark:bg-secondary/40 p-8 min-h-[490px]">
                   <CardHeader className="p-0 mb-10">
                     <div className="flex items-center gap-x-4">
                       {/* Image */}
