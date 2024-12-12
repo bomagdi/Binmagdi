@@ -44,7 +44,7 @@ const Form = () => {
       </div>
       {/* TextAria  */}
       <div className="relative flex items-center">
-        <Textarea name="message" placeholder="Your Message" required/>
+        <Textarea name="message" placeholder="Your message here..." required/>
         <MessageSquare className="absolute top-4 right-6" size={20} />
       </div>
       <Button>
